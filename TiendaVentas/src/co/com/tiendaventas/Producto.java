@@ -1,4 +1,4 @@
-package co.com.prueba1;
+package co.com.tiendaventas;
 
 public class Producto {
 	
