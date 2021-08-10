@@ -4,7 +4,7 @@ public class Orden {
 	
 	private int idOrden;	
 	Producto producto[];
-	private final int MAX_PRODUCTOS= 10;
+	private final int MAX_PRODUCTOS = 10;
 	
 	
 	
