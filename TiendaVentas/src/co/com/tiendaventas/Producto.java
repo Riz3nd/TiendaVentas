@@ -2,17 +2,18 @@ package co.com.tiendaventas;
 
 public class Producto {
 	
+	private final int idProducto;
 	private String nombre;
 	private Double precio;
-	private int idProducto;
 	private static int contProducto;
 	
-	public Producto() {
+	private Producto() {
 		this.idProducto = ++Producto.contProducto;
 		
 	}
 	
 	public Producto(String nombre, Double precio) {
+		this();
 		this.nombre = nombre;
 		this.precio= precio;
 	}
@@ -20,10 +21,7 @@ public class Producto {
 	public int getIdProducto() {
 		return idProducto;
 	}
-	
-	public void setIdProducto(int idProducto) {
-		this.idProducto = idProducto;
-	}
+
 
 	public String getNombre() {
 		return nombre;
@@ -49,7 +47,6 @@ public class Producto {
 		sb.append(" Precio: ").append(this.precio);
 		return super.toString();
 	}
-	
 	
 
 }
