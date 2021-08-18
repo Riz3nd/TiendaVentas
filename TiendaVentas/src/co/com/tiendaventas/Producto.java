@@ -1,5 +1,7 @@
 package co.com.tiendaventas;
 
+import java.text.DecimalFormat;
+
 public class Producto {
 	
 	private final int idProducto;
@@ -42,10 +44,14 @@ public class Producto {
 	@Override
 	public String toString() {
 		StringBuilder sb  = new StringBuilder();
-		sb.append("ID Producto: ").append(this.idProducto);
-		sb.append(" Nombre: ").append(this.nombre);
-		sb.append(" Precio: ").append(this.precio);
-		return super.toString();
+		DecimalFormat df = new DecimalFormat("#,###.###");
+		double total = this.precio;
+		String sTotal = df.format(total);
+		sb.append("\n [ID Producto: ").append(this.idProducto);
+		sb.append(", Nombre: ").append(this.nombre);
+		sb.append(", Precio: ").append(sTotal);
+		sb.append(" ]");
+		return sb.toString();
 	}
 	
 

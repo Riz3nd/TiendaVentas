@@ -21,21 +21,6 @@ public class TestVentas {
 		orden1.agregarProducto(p4);	
 		orden1.mostrarOrden();
 		
-		
-		/*
-		char charToAdd1 = 'E';
-        char charToAdd2 = 'g';
-        
-        String alex = "Alex got Grade  in the School";
-        String bob = "While Bob ot Grade C";
-        
-        String alexResult = alex.substring(0, 15) + charToAdd1 +alex.substring(15);
-        String bobResult = bob.substring(0, 10) + charToAdd2 + bob.substring(10);
-        System.out.println(alexResult);
-        System.out.println(bobResult);
-*/
-	    
-		
 	}
 	
 }

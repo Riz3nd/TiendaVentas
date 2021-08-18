@@ -37,25 +37,16 @@ public class Orden {
 	
 	
 	public void mostrarOrden(){
-		DecimalFormatSymbols simbolos = new DecimalFormatSymbols();
-		simbolos.setDecimalSeparator(',');		
-		DecimalFormat df = new DecimalFormat("#.###");
+		DecimalFormat df = new DecimalFormat("#,###.###");
 		StringBuilder sb = new StringBuilder();
 		double total = this.calcularTotal();
 		String sTotal = df.format(total);
-		
-		if( sTotal.length() == 4 ) {
-			sTotal = sTotal.substring(0,1)+"."+sTotal.substring(1);			
-		}else if( sTotal.length() == 6 ) {
-			sTotal = sTotal.substring(0,3)+","+sTotal.substring(3);
-		}else if( sTotal.length() >= 7 ) {
-			sTotal = sTotal.substring(3)+","+sTotal.substring(6);
+		sb.append("{ID Orden: ").append(this.idOrden);
+		sb.append(" Productos de la orden: ");
+		for( int i = 0; i< this.contadorProductos ;i++ ) {
+			sb.append(this.productos[i].toString());
 		}
-		
-		sb.append("{ ID Orden: ").append(this.idOrden);
-		sb.append(" Total Orden: ").append(sTotal);
-		
-		
+		sb.append("\n Total de la Orden: $").append(sTotal);
 		sb.append(" }");
 		System.out.println(sb.toString());
 	}	
